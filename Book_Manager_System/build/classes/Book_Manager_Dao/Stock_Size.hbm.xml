@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-13 17:11:43 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Book_Manager_Dao.Stock_Size" table="STOCK_SIZE">
+        <id name="book_id" type="java.lang.String">
+            <generator class="foreign">
+            <param name="property">book</param>
+            </generator>
+        </id>
+        <property name="size" type="int">
+            <column name="SIZE" />
+        </property>
+        <one-to-one name="book" class="Book_Manager_Dao.Book" constrained="true" lazy="false" cascade="all"/>
+    </class>
+</hibernate-mapping>

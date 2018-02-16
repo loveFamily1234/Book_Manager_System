@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-18 13:18:56 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Book_Manager_Dao.City" table="CITY">
+        <id name="city_id" type="java.lang.String">
+            <column name="CITY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="city_name" type="java.lang.String">
+            <column name="CITY_NAME" />
+        </property>
+        <property name="parent_id" type="java.lang.String">
+            <column name="PARENT_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

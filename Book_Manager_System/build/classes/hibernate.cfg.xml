@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+  		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">123456</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/book_manager</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+
+
+
+		<!-- 执行操作时是否在控制台打印 SQL -->
+		<property name="show_sql">true</property>
+
+		<!-- 是否对 SQL 进行格式化 -->
+		<property name="format_sql">true</property>
+
+
+		
+		<mapping resource="Book_Manager_Dao/User.hbm.xml" />
+		<mapping resource="Book_Manager_Dao/Book.hbm.xml" />
+		<mapping resource="Book_Manager_Dao/Loaning_Record.hbm.xml"/>
+		<mapping resource="Book_Manager_Dao/Stock_Size.hbm.xml"/>
+		<mapping resource="Book_Manager_Dao/Public.hbm.xml"/>
+		<mapping resource="Book_Manager_Dao/City.hbm.xml"/>
+		<mapping resource="Book_Manager_Dao/Village.hbm.xml"/>
+		<mapping resource="Book_Manager_Dao/Province.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

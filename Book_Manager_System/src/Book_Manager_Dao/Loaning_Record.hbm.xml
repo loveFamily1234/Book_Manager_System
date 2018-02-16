@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-12 19:57:02 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Book_Manager_Dao.Loaning_Record" table="LOANING_RECORD">
+        <id name="Loaning_record_id" type="integer">
+            <column name="LOANING_RECORD_ID" />
+            <generator class="increment"></generator>
+        </id>
+        <property name="id" type="java.lang.String">
+            <column name="ID" />
+        </property>
+        <property name="book_id" type="java.lang.String">
+            <column name="BOOK_ID" />
+        </property>
+        <property name="borrow_date" type="java.lang.String">
+            <column name="BORROW_DATE" />
+        </property>
+        <property name="return_date" type="java.lang.String">
+            <column name="RETURN_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-18 13:17:50 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Book_Manager_Dao.Province" table="PROVINCE">
+        <id name="province_id" type="java.lang.String">
+            <column name="PROVINCE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="province_name" type="java.lang.String">
+            <column name="PROVINCE_NAME" />
+        </property>
+    </class>
+</hibernate-mapping>

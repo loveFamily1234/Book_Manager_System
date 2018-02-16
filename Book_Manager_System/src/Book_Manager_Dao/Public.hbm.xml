@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-12-14 10:03:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Book_Manager_Dao.Public" table="PUBLIC">
+        <id name="public_id" type="int">
+            <column name="PUBLIC_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="public_name" type="java.lang.String">
+            <column name="PUBLIC_NAME" />
+        </property>
+        <property name="public_phone" type="java.lang.String">
+            <column name="PUBLIC_PHONE" />
+        </property>
+        <property name="public_email" type="java.lang.String">
+            <column name="PUBLIC_EMAIL" />
+        </property>
+    </class>
+</hibernate-mapping>

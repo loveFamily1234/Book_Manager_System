@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.serve.static.browserCache" value="false"></constant>
+    <!-- 修改XML后不重启自动加载 -->
+    <constant name="struts.configuration.xml.reload" value="true"></constant>
+    <!-- 打印更详细的错误信息 -->
+    <constant name="struts.devMode" value="true"></constant>
+	<package name="Strut 2" namespace="/" extends="struts-default">
+
+		<action name="getCargosByJson" class="Book_Manager_System_Action.CargosAction"
+			method="getCargosTemp">
+		</action>
+
+		<action name="querybook" class="Book_Manager_System_Action.QueryBook"
+			method="queryBook">
+		</action>
+		<action name="queryuser" class="Book_Manager_System_Action.QueryUser"
+			method="queryuser">
+		</action>
+		
+		<action name="querystock" class="Book_Manager_System_Action.QueryStock"
+			method="querystock">
+		</action>
+		<action name="querystate" class="Book_Manager_System_Action.QueryState"
+			method="querystate">
+		</action>
+		<action name="queryallbook" class="Book_Manager_System_Action.QueryAllBook"
+			method="queryallBook">
+		</action>
+
+		<action name="querypublic" class="Book_Manager_System_Action.QueryPublic"
+			method="querypublic">
+		</action>
+
+		<action name="queryloan" class="Book_Manager_System_Action.QueryLoaning"
+			method="queryLoaning">
+		</action>
+		
+		<action name="queryprovince" class="Book_Manager_System_Action.QueryProvince"
+			method="queryprovince">
+		</action>
+		<action name="querycity" class="Book_Manager_System_Action.QueryCity"
+			method="querycity">
+		</action>
+		<action name="queryvillage" class="Book_Manager_System_Action.QueryVillage"
+			method="queryvillage">
+		</action>
+		
+		<action name="query_info" class="Book_Manager_System_Action.QueryInfo"
+			method="queryInfo">
+		</action>
+		<action name="query_simple" class="Book_Manager_System_Action.QuerySimple"
+			method="querySimple">
+		</action>
+		<action name="query_high_level" class="Book_Manager_System_Action.QueryHighLevel"
+			method="queryHighLevel">
+		</action>
+		<action name="query_null" class="Book_Manager_System_Action.QuerySimple"
+			method="queryNull">
+		</action>
+		
+		<action name="login" class="Book_Manager_System_Action.Confirm_login">
+			<result name="Student">/student.jsp</result>
+			<result name="error">/login.jsp</result>
+			<result name="Teacher">/Manager_first.jsp</result>
+		</action>
+		
+
+		
+	</package>
+	<package name="default" namespace="/" extends="json-default">
+		<action name="hello" class="Book_Manager_System_Action.AddUser">
+			<result type="json"></result>
+		</action>
+		<action name="addBook" class="Book_Manager_System_Action.AddBook">
+			<result type="json"></result>
+		</action>
+		<action name="modifybook" class="Book_Manager_System_Action.ModifyBook">
+			<result type="json"></result>
+		</action>
+		<action name="modifypublic" class="Book_Manager_System_Action.ModifyPublic">
+			<result type="json"></result>
+		</action>
+		<action name="deletebook" class="Book_Manager_System_Action.DeleteBook">
+			<result type="json"></result>
+		</action>
+		<action name="addloan" class="Book_Manager_System_Action.AddLoan">
+			<result type="json"></result>
+		</action>
+		<action name="deleteloan" class="Book_Manager_System_Action.DeleteLoan">
+			<result type="json"></result>
+		</action>
+		<action name="addpublic" class="Book_Manager_System_Action.AddPublic">
+			<result type="json"></result>
+		</action>
+		<action name="deletepublic" class="Book_Manager_System_Action.DeletePublic">
+			<result type="json"></result>
+		</action>
+		
+		<action name="sendtest" class="Book_Manager_System_Action.SendTestAction">
+        <result type="json"></result>
+        </action>
+	</package>
+</struts> 
